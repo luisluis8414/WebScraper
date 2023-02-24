@@ -42,7 +42,6 @@ async function getEmail(URL) {
         await page.waitForNavigation();
 
         await page.waitForSelector('a[href^="mailto:"]');
-        //if no emails are found with the above regex try this
        
             emails = await page.evaluate(() => {
                 const emailElements = Array.from(document.querySelectorAll('a[href^="mailto:"]'));
