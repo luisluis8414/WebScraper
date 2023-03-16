@@ -24,7 +24,7 @@ async function getEmail(URL) {
     
     try {
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
         });
 
         const page = await browser.newPage();
